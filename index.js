@@ -2,18 +2,71 @@
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const generate = require("./utils/generateMarkdown.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'github'
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email'
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your project?',
+        name: 'project'
+    },
+    {
+        type: 'input',
+        message: 'Please write a brief description of this project:',
+        name: 'description'
+    },
+    {
+        // convert this one to a list of 4? choices
+        type: 'input',
+        message: 'What kind of open-source license should this project have?',
+        name: 'license'
+    },
+    {
+        type: 'input',
+        message: 'What command should be run in the terminal to install dependencies?',
+        name: 'command'
+    },
+    {
+        type: 'input',
+        message: 'What instructions should be included to run tests?',
+        name: 'tests'
+    },
+    {
+        type: 'input',
+        message: 'What usage information would you like to provide to the user?',
+        name: 'usage'
+    },
+    {
+        type: 'input',
+        message: 'What contribution guidelines would you like to include?',
+        name: 'guide'
+    }
+];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => console.log(answers));
+    // Above syntax works for grabbing the user's answers and then logging it. Placeholder for now.
+}
 
 // Function call to initialize app
 init();
