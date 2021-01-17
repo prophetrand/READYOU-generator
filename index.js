@@ -21,7 +21,7 @@ const questions = [
     {
         type: 'input',
         message: 'What is the name of your project?',
-        name: 'project'
+        name: 'title'
     },
     {
         type: 'input',
@@ -29,9 +29,9 @@ const questions = [
         name: 'description'
     },
     {
-        // convert this one to a list of 4? choices
-        type: 'input',
+        type: 'list',
         message: 'What kind of open-source license should this project have?',
+        choices: ['MIT', 'Apache 2.0', 'GNU GPLv3'],
         name: 'license'
     },
     {
