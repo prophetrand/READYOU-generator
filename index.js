@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// Packages required for this application
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
@@ -6,7 +6,7 @@ const generate = require("./utils/generateMarkdown.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input to be passed to inquirer.prompt()
 const questions = [
     {
         type: 'input',
