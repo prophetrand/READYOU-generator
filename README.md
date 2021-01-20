@@ -1,7 +1,9 @@
-# Weather Dashboard
+# READYOU Markdown Generator
 
 ## Description
+This Javascript application generates a professional project markdown file based on user input submitted in the terminal console. It utilizes Node.js and the inquirer node package module to prompt the user with a series of questions about their project, and to then write to the file `READYOU.md` using their responses. 
 
+A video of the application in action is included via link in the [Screenshots](#screenshots) section further in this document.
 
 ## Table of Contents
 * [Technologies Used](#technologies-used)
@@ -22,27 +24,33 @@
 
 ## How to Access
 1. Download the contents of this repository to your local machine. 
-2. Using the terminal/Git Bash Navigate to the directory containing the contents of this repository.
-3. Run the command `npm install` in the terminal to install the **inquirer** node package dependency.
+2. Using the terminal/Git Bash Navigate to the directory containing the contents of this repository, named READYOU-generator by default.
+3. Run the command `npm install` in the terminal to install the **inquirer** node package module dependency.
 4. Run the command `node index.js` in the terminal to launch the program.
 5. Enter your responses as prompted in the terminal, and your READYOU.md file will be written for you using your responses. The file will be located in the root of the READYOU-generator directory.
 
 ---
 
 ## What I Did
-
+This Javascript application utilizes a series of callback functions from the node modules **File System** (a module native to Node.js), **inquirer** (a popular 3rd party node package module), and the functions declared in **generateMarkdown.js** to write the READYOU markdown file. I included the necessary node packages with the require() method at the top of index.js. I used the inquirer.prompt() function to ask the user a series of questions in the terminal, and their responses are run through the promisified fs.writeFile() function. The contents of that file are written using a template literal that populates specific values with their respective user responses, and otherwise includes the template structure for the markdown file. After the new file is written, a success message is displayed in the terminal, and a catch() method is included to display an error in the terminal should one occur.
 
 ## Code Snippets 
 
-
 ```
-
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => writeFileAsync('READYOU.md', generate.generateMarkdown(answers)))
+    .then(() => console.log('Successfully wrote contents of READYOU.md'))
+    .catch((err) => console.error(err));
+}
 ```
 
 ## Screenshots
-
+The image below represents the application in action, within an instance of Git Bash. The user is prompted with questions one-by-one to help write their markdown file. Once the user has completed every question, the file is written and a success message displays.
 
 ![example](./assets/example-app.PNG)
+
+[Click here](#) to see a short video demonstrating usage of the application.
 
 ---
 
