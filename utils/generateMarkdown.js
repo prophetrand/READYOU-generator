@@ -39,26 +39,35 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
-  
-  ## Description
-  ${data.description}
+return `# ${data.title}
+${renderLicenseBadge(data.license)}
 
-  ## Table of Contents
-  * [Thingy Thing](#thingy-thing)
-  * [Bonky Bonk](#bonky-bonk)
-  ---------
+## Description
+${data.description}
 
+## Table of Contents
+* [Thingy Thing](#thingy-thing)
+* [Bonky Bonk](#bonky-bonk)
+---------
+## Installation
+To install the node dependencies necessary to run this file, run the command: '${data.command}' in the terminal.
 
-  ---------
-  ## License
-  ${renderLicenseSection(data.license)}
-  
-  ## Questions
-  My GitHub username is: [${data.github}](https://github.com/${data.github})
-  Reach out to me at <${data.email}> with any and all questions regarding this project.
+## Usage
+${data.usage}
 
+## Testing
+${data.tests}
+
+## Contribution
+${data.guide}
+
+---------
+## License
+${renderLicenseSection(data.license)}
+
+## Questions
+My GitHub username is: [${data.github}](https://github.com/${data.github})
+Reach out to me at <${data.email}> with any and all questions regarding this project.
 `;
 }
 
@@ -68,5 +77,3 @@ module.exports = {
   renderLicenseLink,
   renderLicenseSection
 };
-
-// https://choosealicense.com/ this will be quite helpful

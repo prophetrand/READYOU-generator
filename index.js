@@ -64,7 +64,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((answers) => console.log(answers));
+    .then((answers) => console.log(generate.generateMarkdown(answers)));
     // Above syntax works for grabbing the user's answers and then logging it. Placeholder for now.
 }
 
