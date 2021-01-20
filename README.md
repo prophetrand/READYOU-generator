@@ -1,7 +1,7 @@
 # READYOU Markdown Generator
 
 ## Description
-This Javascript application generates a professional project markdown file based on user input submitted in the terminal console. It utilizes Node.js and the inquirer node package module to prompt the user with a series of questions about their project, and to then write to the file `READYOU.md` using their responses. 
+This Javascript application generates a professional project markdown file based on user input submitted in the terminal console. It utilizes Node.js and the inquirer node package module to prompt the user with a series of questions about their project, and to then write to the file `READYOU.md` using their responses. An example file of the same name, created by this application, is included in the root directory of this repository.
 
 A video of the application in action is included via link in the [Screenshots](#screenshots) section further in this document.
 
@@ -50,7 +50,7 @@ The image below represents the application in action, within an instance of Git 
 
 ![example](./assets/example-app.PNG)
 
-[Click here](#) to see a short video demonstrating usage of the application.
+[Click here](https://drive.google.com/file/d/1RnMnsCUIBk7voBZovoD00qZKOGgqQ59z/view) to see a short video demonstrating usage of the application.
 
 ---
 
