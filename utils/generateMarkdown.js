@@ -46,8 +46,14 @@ ${renderLicenseBadge(data.license)}
 ${data.description}
 
 ## Table of Contents
-* [Thingy Thing](#thingy-thing)
-* [Bonky Bonk](#bonky-bonk)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Testing](#testing)
+* [Contribution](#contribution)
+* [License](#license)
+* [Questions](#questions)
+
 ---------
 ## Installation
 To install the node dependencies necessary to run this file, run the command: '${data.command}' in the terminal.

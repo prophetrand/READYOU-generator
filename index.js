@@ -56,16 +56,12 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  
-}
-
-// TODO: Create a function to initialize app
+// The function called to initialize the 'READYOU.md' generator
 function init() {
     inquirer.prompt(questions)
-    .then((answers) => console.log(generate.generateMarkdown(answers)));
-    // Above syntax works for grabbing the user's answers and then logging it. Placeholder for now.
+    .then((answers) => writeFileAsync('READYOU.md', generate.generateMarkdown(answers)))
+    .then(() => console.log('Successfully wrote contents of READYOU.md'))
+    .catch((err) => console.error(err));
 }
 
 // Function call to initialize app
